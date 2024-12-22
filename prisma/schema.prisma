@@ -1,0 +1,13 @@
+// Add this to your existing schema.prisma
+model Settings {
+  id            String   @id @default(auto()) @map("_id") @db.ObjectId
+  name          String   @default("RentNaija")
+  logo          String?
+  description   String?
+  contactEmail  String?
+  phoneNumber   String?
+  address       String?
+  socialLinks   Json?
+  paymentConfig Json?
+  updatedAt     DateTime @updatedAt
+}
